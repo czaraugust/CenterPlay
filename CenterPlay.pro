@@ -1,4 +1,11 @@
 QT += qml quick
+QT  += core gui
+QT += webview
+QT += webenginewidgets
+
+
+TARGET = CenterPlay
+TEMPLATE = app
 
 CONFIG += c++11
 

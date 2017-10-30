@@ -9,6 +9,7 @@ PageMusicForm {
     }
     button3.onClicked: {
         console.log("Button \"Image\" clicked.");
+
     }
     text1 {
         id: textDate

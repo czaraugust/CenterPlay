@@ -1,7 +1,10 @@
 QT += qml quick
 QT  += core gui
-QT += webview
-QT += webenginewidgets
+QT += qml quick webview
+QT += webengine
+QTPLUGIN += qtvirtualkeyboardplugin
+
+
 
 
 TARGET = CenterPlay

@@ -1,11 +1,18 @@
 import QtQuick 2.0
-
+//https://doc.qt.io/qt-5/qtwebengine-webengine-minimal-example.html
 PageVideoForm {
+    id: root
     button1.onClicked: {
-        console.log("Button \"Video\" clicked.");
+        console.log("Button \"Netflix\" clicked.");
+        var component = Qt.createComponent("PageNetflix.qml")
+        var window    = component.createObject(root)
+        window.show()
     }
     button2.onClicked: {
-        console.log("Button \"Music\" clicked.");
+        console.log("Button \"Youtube\" clicked.");
+        var component = Qt.createComponent("PageYoutube.qml")
+        var window    = component.createObject(root)
+        window.show()
     }
     button3.onClicked: {
         console.log("Button \"Image\" clicked.");
@@ -24,6 +31,4 @@ PageVideoForm {
             textDate.text = Qt.formatDateTime(new Date(), "hh:mm dd/MM/yyyy")
         }
     }
-    Keys.onLeftPressed: swipeView.currentIndex = 0
-    Keys.onRightPressed: swipeView.currentIndex = 2
 }

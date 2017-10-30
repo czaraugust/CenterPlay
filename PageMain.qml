@@ -1,4 +1,9 @@
 import QtQuick 2.7
+import QtQuick 2.2
+import QtQuick.Controls 1.1
+import QtWebView 1.1
+import QtQuick.Layouts 1.1
+import QtQuick.Controls.Styles 1.2
 
 PageMainForm {
     Loader {
@@ -7,6 +12,7 @@ PageMainForm {
 
     button1.onClicked: {
         swipeView.currentIndex = 1
+
     }
     button2.onClicked: {
         swipeView.currentIndex = 2
@@ -34,6 +40,4 @@ PageMainForm {
             textDate.text = Qt.formatDateTime(new Date(), "hh:mm dd/MM/yyyy")
         }
     }
-    Keys.onLeftPressed: swipeView.currentIndex = 0
-    Keys.onRightPressed: swipeView.currentIndex = 2
 }

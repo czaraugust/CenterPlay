@@ -28,5 +28,9 @@
         <file>img/usb_indigo.png</file>
         <file>img/usb_orange.png</file>
         <file>img/video_icon.png</file>
+        <file>PageSpotify.qml</file>
+        <file>PageNetflix.qml</file>
+        <file>PageYoutube.qml</file>
+        <file>img/youtube.ico</file>
     </qresource>
 </RCC>

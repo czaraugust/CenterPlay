@@ -1,16 +1,19 @@
 #include <QGuiApplication>
-#include <QApplication>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 #include "scriptlauncher.h"
+#include <QtCore/QUrl>
 #include <QtWebView/QtWebView>
-#include <QWebEngineView>
+//#include <QWebEngineView>
+#include <qtwebengineglobal.h>
 
 int main(int argc, char *argv[])
 {
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
-    QApplication app(argc, argv);
-    QWebEngineView view;
+    QGuiApplication app(argc, argv);
+    //QtWebView::initialize();
+    QtWebEngine::initialize();
+
     QQmlApplicationEngine engine;
     engine.rootContext()->setContextProperty("resWidth", 640);
     engine.rootContext()->setContextProperty("resHeight", 480);
@@ -19,6 +22,7 @@ int main(int argc, char *argv[])
     ScriptLauncher launcher;
     QQmlContext *context = engine.rootContext();
     context->setContextProperty("scriptLauncher", &launcher);
-    
+
+
     return app.exec();
 }

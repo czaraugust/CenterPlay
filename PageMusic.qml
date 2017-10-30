@@ -1,14 +1,30 @@
 import QtQuick 2.0
+import QtQuick 2.2
+import QtQuick.Controls 1.1
+import QtWebView 1.1
+import QtQuick.Layouts 1.1
+import QtQuick.Controls.Styles 1.2
+
+import QtQuick 2.0
+import QtQuick.Window 2.0
+import QtWebEngine 1.0
+
 
 PageMusicForm {
+    id: root
     button1.onClicked: {
-        console.log("Button \"Video\" clicked.");
+        console.log("Button \"Spotify\" clicked.");
+        var component = Qt.createComponent("PageSpotify.qml")
+        var window    = component.createObject(root)
+        window.show()
+
+       // window.showFullScreen()
     }
     button2.onClicked: {
-        console.log("Button \"Music\" clicked.");
+        console.log("Button \"Deezer\" clicked.");
     }
     button3.onClicked: {
-        console.log("Button \"Image\" clicked.");
+        console.log("Button \"SDCARD\" clicked.");
 
     }
     text1 {
@@ -25,6 +41,5 @@ PageMusicForm {
             textDate.text = Qt.formatDateTime(new Date(), "hh:mm dd/MM/yyyy")
         }
     }
-    Keys.onLeftPressed: swipeView.currentIndex = 0
-    Keys.onRightPressed: swipeView.currentIndex = 2
+
 }

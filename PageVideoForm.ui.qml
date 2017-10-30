@@ -69,7 +69,7 @@ Item {
             Image {
                 id: image2
                 anchors.fill: parent
-                source: "img/music_icon.png"
+                source: "img/youtube.ico"
             }
         }
 

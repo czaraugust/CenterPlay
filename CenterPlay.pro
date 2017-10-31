@@ -1,8 +1,9 @@
 QT += qml quick
 QT  += core gui
 QT += qml quick webview
-QT += webengine
+QT += webengine svg
 QTPLUGIN += qtvirtualkeyboardplugin
+
 
 
 

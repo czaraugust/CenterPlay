@@ -12,10 +12,10 @@ MAKEFILE      = Makefile
 
 CC            = gcc
 CXX           = g++
-DEFINES       = -DQT_QML_DEBUG -DQT_WEBENGINE_LIB -DQT_WEBENGINECORE_LIB -DQT_QUICK_LIB -DQT_GUI_LIB -DQT_WEBCHANNEL_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_POSITIONING_LIB -DQT_CORE_LIB -DQT_WEBVIEW_LIB
+DEFINES       = -DQT_QML_DEBUG -DQT_WEBENGINE_LIB -DQT_WEBENGINECORE_LIB -DQT_QUICK_LIB -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_WEBCHANNEL_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_POSITIONING_LIB -DQT_CORE_LIB -DQT_WEBVIEW_LIB
 CFLAGS        = -pipe -g -Wall -W -D_REENTRANT -fPIC $(DEFINES)
 CXXFLAGS      = -pipe -g -std=gnu++11 -Wall -W -D_REENTRANT -fPIC $(DEFINES)
-INCPATH       = -I. -I/home/cesar/Qt5.9.0/5.9/gcc_64/include -I/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtWebEngine -I/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtWebEngineCore -I/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtQuick -I/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtGui -I/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtWebChannel -I/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtQml -I/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtNetwork -I/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtPositioning -I/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtCore -I/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtWebView -I. -isystem /usr/include/libdrm -I/home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/linux-g++
+INCPATH       = -I. -I/home/cesar/Qt5.9.0/5.9/gcc_64/include -I/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtWebEngine -I/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtWebEngineCore -I/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtQuick -I/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtSvg -I/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtWidgets -I/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtGui -I/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtWebChannel -I/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtQml -I/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtNetwork -I/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtPositioning -I/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtCore -I/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtWebView -I. -isystem /usr/include/libdrm -I/home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/linux-g++
 QMAKE         = /home/cesar/Qt5.9.0/5.9/gcc_64/bin/qmake
 DEL_FILE      = rm -f
 CHK_DIR_EXISTS= test -d
@@ -39,7 +39,7 @@ DISTNAME      = CenterPlay1.0.0
 DISTDIR = /home/cesar/Documentos/UFAL/OITAVO/TSO/CenterPlay/.tmp/CenterPlay1.0.0
 LINK          = g++
 LFLAGS        = -Wl,-rpath,/home/cesar/Qt5.9.0/5.9/gcc_64/lib -Wl,-rpath-link,/home/cesar/Qt5.9.0/5.9/gcc_64/lib
-LIBS          = $(SUBLIBS) -L/home/cesar/Qt5.9.0/5.9/gcc_64/lib -lQt5WebEngine -lQt5WebEngineCore -lQt5Quick -lQt5Gui -lQt5WebChannel -lQt5Qml -lQt5Network -lQt5Positioning -lQt5Core -lQt5WebView -lGL -lpthread 
+LIBS          = $(SUBLIBS) -L/home/cesar/Qt5.9.0/5.9/gcc_64/lib -lQt5WebEngine -lQt5WebEngineCore -lQt5Quick -lQt5Svg -lQt5Widgets -lQt5Gui -lQt5WebChannel -lQt5Qml -lQt5Network -lQt5Positioning -lQt5Core -lQt5WebView -lGL -lpthread 
 AR            = ar cqs
 RANLIB        = 
 SED           = sed
@@ -231,6 +231,7 @@ DIST          = /home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/features/spec_pre.prf \
 		/home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/features/resources.prf \
 		/home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/features/moc.prf \
 		/home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/features/unix/opengl.prf \
+		/home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/features/uic.prf \
 		/home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/features/unix/thread.prf \
 		/home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/features/qmake_use.prf \
 		/home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/features/file_copies.prf \
@@ -424,6 +425,7 @@ Makefile: CenterPlay.pro /home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/linux-g++/qmake.
 		/home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/features/resources.prf \
 		/home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/features/moc.prf \
 		/home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/features/unix/opengl.prf \
+		/home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/features/uic.prf \
 		/home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/features/unix/thread.prf \
 		/home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/features/qmake_use.prf \
 		/home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/features/file_copies.prf \
@@ -436,6 +438,8 @@ Makefile: CenterPlay.pro /home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/linux-g++/qmake.
 		/home/cesar/Qt5.9.0/5.9/gcc_64/lib/libQt5WebEngine.prl \
 		/home/cesar/Qt5.9.0/5.9/gcc_64/lib/libQt5WebEngineCore.prl \
 		/home/cesar/Qt5.9.0/5.9/gcc_64/lib/libQt5Quick.prl \
+		/home/cesar/Qt5.9.0/5.9/gcc_64/lib/libQt5Svg.prl \
+		/home/cesar/Qt5.9.0/5.9/gcc_64/lib/libQt5Widgets.prl \
 		/home/cesar/Qt5.9.0/5.9/gcc_64/lib/libQt5Gui.prl \
 		/home/cesar/Qt5.9.0/5.9/gcc_64/lib/libQt5WebChannel.prl \
 		/home/cesar/Qt5.9.0/5.9/gcc_64/lib/libQt5Qml.prl \
@@ -617,6 +621,7 @@ deployment.pri:
 /home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/features/resources.prf:
 /home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/features/moc.prf:
 /home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/features/unix/opengl.prf:
+/home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/features/uic.prf:
 /home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/features/unix/thread.prf:
 /home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/features/qmake_use.prf:
 /home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/features/file_copies.prf:
@@ -629,6 +634,8 @@ qml.qrc:
 /home/cesar/Qt5.9.0/5.9/gcc_64/lib/libQt5WebEngine.prl:
 /home/cesar/Qt5.9.0/5.9/gcc_64/lib/libQt5WebEngineCore.prl:
 /home/cesar/Qt5.9.0/5.9/gcc_64/lib/libQt5Quick.prl:
+/home/cesar/Qt5.9.0/5.9/gcc_64/lib/libQt5Svg.prl:
+/home/cesar/Qt5.9.0/5.9/gcc_64/lib/libQt5Widgets.prl:
 /home/cesar/Qt5.9.0/5.9/gcc_64/lib/libQt5Gui.prl:
 /home/cesar/Qt5.9.0/5.9/gcc_64/lib/libQt5WebChannel.prl:
 /home/cesar/Qt5.9.0/5.9/gcc_64/lib/libQt5Qml.prl:
@@ -780,10 +787,12 @@ moc_scriptlauncher.cpp: /home/cesar/Qt5.9.0/5.9/gcc_64/include/QtCore/QObject \
 		scriptlauncher.h \
 		moc_predefs.h \
 		/home/cesar/Qt5.9.0/5.9/gcc_64/bin/moc
-	/home/cesar/Qt5.9.0/5.9/gcc_64/bin/moc $(DEFINES) --include ./moc_predefs.h -I/home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/linux-g++ -I/home/cesar/Documentos/UFAL/OITAVO/TSO/CenterPlay -I/home/cesar/Qt5.9.0/5.9/gcc_64/include -I/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtWebEngine -I/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtWebEngineCore -I/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtQuick -I/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtGui -I/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtWebChannel -I/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtQml -I/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtNetwork -I/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtPositioning -I/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtCore -I/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtWebView -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include scriptlauncher.h -o moc_scriptlauncher.cpp
+	/home/cesar/Qt5.9.0/5.9/gcc_64/bin/moc $(DEFINES) --include ./moc_predefs.h -I/home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/linux-g++ -I/home/cesar/Documentos/UFAL/OITAVO/TSO/CenterPlay -I/home/cesar/Qt5.9.0/5.9/gcc_64/include -I/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtWebEngine -I/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtWebEngineCore -I/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtQuick -I/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtSvg -I/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtWidgets -I/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtGui -I/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtWebChannel -I/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtQml -I/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtNetwork -I/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtPositioning -I/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtCore -I/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtWebView -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include scriptlauncher.h -o moc_scriptlauncher.cpp
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
+compiler_uic_make_all:
+compiler_uic_clean:
 compiler_yacc_decl_make_all:
 compiler_yacc_decl_clean:
 compiler_yacc_impl_make_all:

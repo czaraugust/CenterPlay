@@ -15,7 +15,7 @@ FileDialog {
        pictureSource= fileDialog.fileUrl;
         console.log("You chose: " + pictureSource)
 
-        var component = Qt.createComponent("Picture.qml")
+        var component = Qt.createComponent("qrc:/Picture.qml")
         var window    = component.createObject(root, {'folder':pictureSource})
 
         //Qt.quit()

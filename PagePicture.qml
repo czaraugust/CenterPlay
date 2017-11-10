@@ -4,7 +4,7 @@ PagePictureForm {
     id: root
     button1.onClicked: {
         console.log("Button \"Video\" clicked.");
-        var component = Qt.createComponent("FolderPicture.qml")
+        var component = Qt.createComponent("qrc:/FolderPicture.qml")
         var window    = component.createObject(root)
 
 

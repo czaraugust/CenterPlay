@@ -15,7 +15,7 @@ FileDialog {
        videoSource= fileDialog.fileUrl;
         console.log("You chose: " + videoSource)
 
-        var component = Qt.createComponent("Player.qml")
+        var component = Qt.createComponent("qrc:/Player.qml")
         var window    = component.createObject(root, {'folder':videoSource})
 
         //Qt.quit()

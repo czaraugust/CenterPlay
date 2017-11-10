@@ -33,7 +33,7 @@ import QtQuick.Controls 2.0
                 player.stop()
                 video.enabled = false
                 video.visible = false
-                var component = Qt.createComponent("PageVideo.qml")
+                var component = Qt.createComponent("qrc:/PageVideo.qml")
                 var window    = component.createObject(video)
 
 

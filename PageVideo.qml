@@ -8,19 +8,19 @@ PageVideoForm {
     enabled: true
     button1.onClicked: {
         console.log("Button \"Netflix\" clicked.");
-        var component = Qt.createComponent("PageNetflix.qml")
+        var component = Qt.createComponent("qrc:/PageNetflix.qml")
         var window    = component.createObject(root)
         window.show()
     }
     button2.onClicked: {
         console.log("Button \"Youtube\" clicked.");
-        var component = Qt.createComponent("PageYoutube.qml")
+        var component = Qt.createComponent("qrc:PageYoutube.qml")
         var window    = component.createObject(root)
         window.show()
     }
     button3.onClicked: {
 
-       var component = Qt.createComponent("FolderVideo.qml")
+       var component = Qt.createComponent("qrc:/FolderVideo.qml")
        var window    = component.createObject(root)
 
 

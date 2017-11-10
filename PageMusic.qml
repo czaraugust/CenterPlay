@@ -13,7 +13,7 @@ PageMusicForm {
     id: root
     button1.onClicked: {
         console.log("Button \"Spotify\" clicked.");
-        var component = Qt.createComponent("PageSpotify.qml")
+        var component = Qt.createComponent("qrc:/PageSpotify.qml")
         var window    = component.createObject(root)
         window.show()
 
@@ -22,13 +22,13 @@ PageMusicForm {
     }
     button2.onClicked: {
         console.log("Button \"Deezer\" clicked.");
-        var component = Qt.createComponent("PageDeezer.qml")
+        var component = Qt.createComponent("qrc:/PageDeezer.qml")
         var window    = component.createObject(root)
         window.show()
     }
     button3.onClicked: {
         console.log("Button \"SDCARD\" clicked.");
-        var component = Qt.createComponent("FolderMusic.qml")
+        var component = Qt.createComponent("qrc:/FolderMusic.qml")
         var window    = component.createObject(root)
 
     }

@@ -689,22 +689,32 @@ compiler_rcc_clean:
 	-$(DEL_FILE) qrc_qml.cpp
 qrc_qml.cpp: qml.qrc \
 		/home/cesar/Qt5.9.0/5.9/gcc_64/bin/rcc \
-		PageMainForm.ui.qml \
-		PageSpotify.qml \
-		PageVideo.qml \
-		PageMusic.qml \
-		PageYoutube.qml \
+		FolderVideo.qml \
 		PagePicture.qml \
+		Picture.qml \
+		PageVideo.qml \
+		PageMainForm.ui.qml \
+		PageYoutube.qml \
+		PageMain.qml \
+		FolderMusic.qml \
+		PageMusic.qml \
 		PagePictureForm.ui.qml \
 		PageGameForm.ui.qml \
-		PageNetflix.qml \
-		PageMain.qml \
+		PageSpotify.qml \
 		PageGame.qml \
-		PageMusicForm.ui.qml \
 		PageVideoForm.ui.qml \
 		main.qml \
+		Player.qml \
+		PageNetflix.qml \
+		FolderPicture.qml \
+		PageMusicForm.ui.qml \
+		PageDeezer.qml \
 		img/video_icon.png \
+		img/deezer.png \
+		img/prev.png \
+		img/pause.png \
 		img/usb_orange.png \
+		img/play.png \
 		img/netflix.png \
 		img/saw.ico \
 		img/film-2-48.png \
@@ -719,6 +729,7 @@ qrc_qml.cpp: qml.qrc \
 		img/film-2-128.png \
 		img/sonic.png \
 		img/bf4.png \
+		img/next.png \
 		img/fo.png \
 		img/film-2-64.png
 	/home/cesar/Qt5.9.0/5.9/gcc_64/bin/rcc -name qml qml.qrc -o qrc_qml.cpp
@@ -904,7 +915,15 @@ main.o: main.cpp /home/cesar/Qt5.9.0/5.9/gcc_64/include/QtGui/QGuiApplication \
 		/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtWebView/qtwebviewfunctions.h \
 		/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtWebView/qwebview_global.h \
 		/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtWebView/qtwebviewversion.h \
-		/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtWebEngine/qtwebengineglobal.h
+		/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtWebEngine/qtwebengineglobal.h \
+		/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtWebEngineCore/QWebEngineCookieStore \
+		/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtWebEngineCore/qwebenginecookiestore.h \
+		/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtWebEngineCore/qtwebenginecoreglobal.h \
+		/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtWebEngineCore/qwebenginecallback.h \
+		/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtNetwork/qnetworkcookie.h \
+		/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtCore/QSharedDataPointer \
+		/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtCore/QList \
+		/home/cesar/Qt5.9.0/5.9/gcc_64/include/QtCore/QMetaType
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o main.cpp
 
 scriptlauncher.o: scriptlauncher.cpp scriptlauncher.h \

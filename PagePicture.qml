@@ -1,8 +1,13 @@
 import QtQuick 2.4
 
 PagePictureForm {
+    id: root
     button1.onClicked: {
         console.log("Button \"Video\" clicked.");
+        var component = Qt.createComponent("FolderPicture.qml")
+        var window    = component.createObject(root)
+
+
     }
     text1 {
         id: textDate

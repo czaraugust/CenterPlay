@@ -7,6 +7,9 @@ import QtGamepad 1.0
 
 
 ApplicationWindow {
+
+    id: aplicationroot
+
     visible: true
     width: resWidth
     height: resHeight

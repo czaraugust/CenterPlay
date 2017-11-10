@@ -32,5 +32,16 @@
         <file>PageNetflix.qml</file>
         <file>PageYoutube.qml</file>
         <file>img/youtube.ico</file>
+        <file>FolderVideo.qml</file>
+        <file>Player.qml</file>
+        <file>img/prev.png</file>
+        <file>img/play.png</file>
+        <file>img/pause.png</file>
+        <file>img/next.png</file>
+        <file>FolderMusic.qml</file>
+        <file>FolderPicture.qml</file>
+        <file>Picture.qml</file>
+        <file>PageDeezer.qml</file>
+        <file>img/deezer.png</file>
     </qresource>
 </RCC>

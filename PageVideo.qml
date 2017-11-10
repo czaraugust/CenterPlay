@@ -1,7 +1,11 @@
 import QtQuick 2.0
+import QtQuick.Dialogs 1.2
+
 //https://doc.qt.io/qt-5/qtwebengine-webengine-minimal-example.html
 PageVideoForm {
     id: root
+    visible: true
+    enabled: true
     button1.onClicked: {
         console.log("Button \"Netflix\" clicked.");
         var component = Qt.createComponent("PageNetflix.qml")
@@ -15,7 +19,11 @@ PageVideoForm {
         window.show()
     }
     button3.onClicked: {
-        console.log("Button \"Image\" clicked.");
+
+       var component = Qt.createComponent("FolderVideo.qml")
+       var window    = component.createObject(root)
+
+
     }
     text1 {
         id: textDate

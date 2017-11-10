@@ -6,6 +6,7 @@
 #include <QtWebView/QtWebView>
 //#include <QWebEngineView>
 #include <qtwebengineglobal.h>
+#include <QWebEngineCookieStore>
 
 int main(int argc, char *argv[])
 {
@@ -14,6 +15,9 @@ int main(int argc, char *argv[])
     QGuiApplication app(argc, argv);
     //QtWebView::initialize();
     QtWebEngine::initialize();
+
+
+
 
     QQmlApplicationEngine engine;
     engine.rootContext()->setContextProperty("resWidth", 640);

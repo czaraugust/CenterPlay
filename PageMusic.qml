@@ -1,13 +1,12 @@
 import QtQuick 2.0
 import QtQuick 2.2
 import QtQuick.Controls 1.1
-import QtWebView 1.1
 import QtQuick.Layouts 1.1
 import QtQuick.Controls.Styles 1.2
 
 import QtQuick 2.0
 import QtQuick.Window 2.0
-import QtWebEngine 1.0
+import QtWebEngine 1.3
 
 
 PageMusicForm {
@@ -18,13 +17,19 @@ PageMusicForm {
         var window    = component.createObject(root)
         window.show()
 
-       // window.showFullScreen()
+
+       //window.showFullScreen()
     }
     button2.onClicked: {
         console.log("Button \"Deezer\" clicked.");
+        var component = Qt.createComponent("PageDeezer.qml")
+        var window    = component.createObject(root)
+        window.show()
     }
     button3.onClicked: {
         console.log("Button \"SDCARD\" clicked.");
+        var component = Qt.createComponent("FolderMusic.qml")
+        var window    = component.createObject(root)
 
     }
     text1 {

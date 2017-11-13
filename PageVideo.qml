@@ -41,7 +41,7 @@ PageVideoForm {
 
         }
         var window    = component.createObject(root)
-        window.show()
+        //window.show()
     }
     button3.onClicked: {
 

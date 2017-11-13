@@ -10,7 +10,7 @@ FileDialog {
     width: resWidth
     height: resHeight
     title: "Open your video"
-    folder: "file:///home/cesar/Vídeos/"
+    folder: "file:///home/"
     onAccepted: {
        videoSource= fileDialog.fileUrl;
         console.log("You chose: " + videoSource)

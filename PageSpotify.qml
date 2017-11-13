@@ -4,10 +4,9 @@ import QtWebEngine 1.3
 import QtQuick.VirtualKeyboard 1.3
 //import QtQuick.VirtualKeyboard.Settings 2.2
 import QtQuick.Controls 2.0
-Window{
+Rectangle{
     id: root
-    width: resWidth
-    height: resHeight
+   anchors.fill: parent
     WebEngineView {
         id: spot
         visible: true

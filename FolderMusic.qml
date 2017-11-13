@@ -10,7 +10,7 @@ FileDialog {
     width: resWidth
     height: resHeight
     title: "Open your song"
-    folder: "file:///home/cesar/Música/"
+    folder: "file:///home/"
     onAccepted: {
        musicSource= fileDialog.fileUrl;
         console.log("You chose: " + musicSource)

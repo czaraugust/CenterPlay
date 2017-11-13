@@ -25,7 +25,7 @@ PageVideoForm {
 
         }
         else{
-             window.show()
+             //window.show()
             console.log("foi")
         }
 

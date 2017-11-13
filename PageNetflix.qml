@@ -1,7 +1,7 @@
 import QtQuick 2.0
 import QtQuick.Window 2.0
 import QtWebEngine 1.3
-import QtQuick.VirtualKeyboard 2.2
+import QtQuick.VirtualKeyboard 1.3
 import QtQuick.Controls 2.0
 Window{
     id: root

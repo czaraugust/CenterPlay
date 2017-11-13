@@ -16,6 +16,12 @@ FileDialog {
         console.log("You chose: " + musicSource)
 
         var component = Qt.createComponent("qrc:/Player.qml")
+        if (component.status != Component.Ready){
+            if(component.status == Component.Error){
+                console.debug("Error:" + component.errorString())
+            }
+
+        }
         var window    = component.createObject(root, {'folder':musicSource})
 
         //Qt.quit()

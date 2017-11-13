@@ -34,12 +34,24 @@ PageVideoForm {
     button2.onClicked: {
         console.log("Button \"Youtube\" clicked.");
         var component = Qt.createComponent("qrc:PageYoutube.qml")
+        if (component.status != Component.Ready){
+            if(component.status == Component.Error){
+                console.debug("Error:" + component.errorString())
+            }
+
+        }
         var window    = component.createObject(root)
         window.show()
     }
     button3.onClicked: {
 
        var component = Qt.createComponent("qrc:/FolderVideo.qml")
+        if (component.status != Component.Ready){
+            if(component.status == Component.Error){
+                console.debug("Error:" + component.errorString())
+            }
+
+        }
        var window    = component.createObject(root)
 
 

@@ -12,6 +12,13 @@ PageVideoForm {
     button1.onClicked: {
         console.log("Button \"Netflix\" clicked.");
         var component = Qt.createComponent("qrc:/PageNetflix.qml")
+        if (component.status != Component.Ready){
+            if(component.status == Component.Error){
+                console.debug("Error:" + component.errorString())
+            }
+
+        }
+
         var window    = component.createObject(root)
         if (window == null){
             console.log("Nao foi")

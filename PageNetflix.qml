@@ -5,8 +5,7 @@ import QtQuick.VirtualKeyboard 1.3
 import QtQuick.Controls 2.0
 Rectangle{
     id: root
-    width: resWidth
-    height: resHeight
+     anchors.fill: parent
     WebEngineView {
 
         visible: true
